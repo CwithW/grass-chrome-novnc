@@ -21,4 +21,4 @@ jobs:
       with:
         push: true
         tags:
-          ${{ github.repository }}:latest
+          cwithw/grass-chrome-novnc:latest
