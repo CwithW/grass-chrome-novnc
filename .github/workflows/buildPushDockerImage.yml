@@ -20,5 +20,6 @@ jobs:
       uses: docker/build-push-action@v5.1.0
       with:
         push: true
+        platforms: linux/amd64,linux/arm64
         tags:
           cwithw/grass-chrome-novnc:latest
