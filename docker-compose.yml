@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  grass-chrome-novnc:
+    build: .
+    container_name: grass-chrome-novnc
+    environment:
+      - VNC_PASS=${VNC_PASS-CHANGE_IT}
+      - VNC_TITLE=${VNC_TITLE-GrassChromium}
+      - VNC_SHARED=${VNC_SHARED-false}
+      - VNC_RESOLUTION=${VNC_RESOLUTION-800x600}
+      - EXTRA_COMMAND=${EXTRA_COMMAND-sleep infinity}
+      - EXTRA_CHROME_OPTS=${EXTRA_CHROME_OPTS-}
+      - HOMEPAGE=${HOMEPAGE-https://app.getgrass.io/}
+    image: cwithw/grass-chrome-novnc:latest
+    ports:
+      - "${HOST_PORT-8080}:8080/tcp"
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+      - ./log:/var/log
