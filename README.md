@@ -16,6 +16,7 @@ docker run -d -p 8080:8080 -e VNC_PASS=CHANGE_IT  cwithw/grass-chrome-novnc:late
 
 ## Pre built image
 amd64: `cwithw/grass-chrome-novnc:latest`
+arm64: `cwithw/grass-chrome-novnc:latest`
 
 ## Building
 if you are having trouble building it because you cannot access google server to download Grass plugin, you can use `docker build . -t cwithw/grass-chrome-novnc:latest --build-arg https_proxy=http://192.168.32.2:7890` to build it with proxy.
@@ -28,7 +29,7 @@ if you are having trouble building it because you cannot access google server to
 |VNC_SHARED    |VNC Shared Mode          |false          |
 |VNC_RESOLUTION|VNC Resolution           |800x600       |
 |EXTRA_COMMAND |Extra command to run. can be used to update grass extension(`sh /scripts/getgrass.sh && sleep infinity`) or start ssh proxy(`sshpass -p password ssh -o StrictHostKeyChecking=no -N -C -D 1337 root@bounceServer`). make sure this command runs forever and does not exit on success.     |sleep infinity               |
-|HOMEPAGE      |Homepage to open         |grass homepage|
+|HOMEPAGE      |Homepage to open         |[grass homepage](https://app.getgrass.io/)|
 |EXTRA_CHROME_OPTS|Extra chrome options. can be used to set proxy(--proxy-server=).  |               |
 |HOST_PORT     |Host port for VNC        |8080           |
 
