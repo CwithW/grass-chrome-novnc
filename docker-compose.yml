@@ -3,7 +3,6 @@ version: '3.4'
 services:
   grass-chrome-novnc:
     build: .
-    container_name: grass-chrome-novnc
     environment:
       - VNC_PASS=${VNC_PASS-CHANGE_IT}
       - VNC_TITLE=${VNC_TITLE-GrassChromium}

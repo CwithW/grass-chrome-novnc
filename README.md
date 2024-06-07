@@ -34,4 +34,5 @@ if you are having trouble building it because you cannot access google server to
 
 ## directories
 /data: data. mount this folder to keep your grass cookies.
+
 /var/log: log
