@@ -3,6 +3,13 @@ Based on https://github.com/vital987/chrome-novnc .
 
 Removed the Heroku keep-alive part because you can't run Grass on Heroku anyways.
 
+## Disclaimer
+You CAN get banned by getgrass if you use this project.
+
+Getgrass uses your IP address to do web scraping.
+
+Unlike these python scripts which just respond to ping and don't answer to web scraping request, this project uses a chromium to run the Grass extension. Getgrass shouldn't care about using chromium, but they can. Use at your own risk.
+
 ## Usage
 
 ### with docker compose
