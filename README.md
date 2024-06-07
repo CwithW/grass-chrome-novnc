@@ -4,25 +4,30 @@ Based on https://github.com/vital987/chrome-novnc .
 Removed the Heroku keep-alive part because you can't run Grass on Heroku anyways.
 
 ## Disclaimer
+This project is not affiliated with getgrass in any way.
+
 You CAN get banned by getgrass if you use this project.
 
-Getgrass uses your IP address to do web scraping.
-
-Unlike these python scripts which just respond to ping and don't answer to web scraping request, this project uses a chromium to run the Grass extension. Getgrass shouldn't care about using chromium, but they can. Use at your own risk.
+Getgrass shouldn't care about using chromium inside a container, but they may. Use at your own risk.
 
 ## Usage
 
 ### with docker compose
 `docker compose up` and access `http://localhost:8080` to access the VNC.
 
+Login your getgrass account from the chromium browser inside the VNC, and the grass extension will be running like in a normal browser.
+
 ### with docker run
 ```
 docker run -d -p 8080:8080 -e VNC_PASS=CHANGE_IT  cwithw/grass-chrome-novnc:latest
 ```
 
+Add other environment variables if needed.
+
 
 ## Pre built image
 amd64: `cwithw/grass-chrome-novnc:latest`
+
 arm64: `cwithw/grass-chrome-novnc:latest`
 
 ## Building
