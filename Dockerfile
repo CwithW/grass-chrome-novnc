@@ -25,7 +25,7 @@ ENV	VNC_PASS="CHANGE_IT" \
 # Extra
 HOMEPAGE="https://app.getgrass.io/" \
 EXTRA_CHROME_OPTS="" \
-EXTRA_COMMAND="sleep infinity"
+EXTRA_COMMAND="exit 0"
 
 RUN	sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories && \
 	apk update && \

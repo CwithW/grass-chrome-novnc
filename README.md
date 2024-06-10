@@ -40,7 +40,7 @@ if you are having trouble building it because you cannot access google server to
 |VNC_TITLE     |VNC Session Title        |GrassChromium       |
 |VNC_SHARED    |VNC Shared Mode          |false          |
 |VNC_RESOLUTION|VNC Resolution           |800x600       |
-|EXTRA_COMMAND |Extra command to run. can be used to update grass extension(`sh /scripts/getgrass.sh && sleep infinity`) or start ssh proxy(`sshpass -p password ssh -o StrictHostKeyChecking=no -N -C -D 1337 root@bounceServer`). make sure this command runs forever and does not exit on success.     |sleep infinity               |
+|EXTRA_COMMAND |Extra command to run. can be used to update grass extension(`sh /scripts/getgrass.sh`) or start ssh proxy(`sshpass -p password ssh -o StrictHostKeyChecking=no -N -C -D 1337 root@bounceServer`). make sure this command runs forever or exit with code 0 on success.     |exit 0               |
 |HOMEPAGE      |Homepage to open         |[grass homepage](https://app.getgrass.io/)|
 |EXTRA_CHROME_OPTS|Extra chrome options. can be used to set proxy(--proxy-server=).  |               |
 |HOST_PORT     |Host port for VNC        |8080           |
