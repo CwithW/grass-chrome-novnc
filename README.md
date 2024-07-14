@@ -37,14 +37,13 @@ if you are having trouble building it because you cannot access google server to
 |VARIABLE      |DESCRIPTION              |DEFAULT VALUE  |
 |-------------:|:------------------------|:-------------:|
 |VNC_PASS      |VNC Password             |CHANGE_IT      |
-|VNC_TITLE     |VNC Session Title        |GrassChromium       |
+|VNC_TITLE     |VNC Session Title        |GrassChromiumLite or GrassChromiumCommunity       |
 |VNC_SHARED    |VNC Shared Mode          |false          |
 |VNC_RESOLUTION|VNC Resolution           |800x600       |
 |EXTRA_COMMAND |Extra command to run. can be used to update grass extension(`sh /scripts/getgrass.sh`) or start ssh proxy(`sshpass -p password ssh -o StrictHostKeyChecking=no -N -C -D 1337 root@bounceServer`). make sure this command runs forever or exit with code 0 on success.     |exit 0               |
 |HOMEPAGE      |Homepage to open         |[grass homepage](https://app.getgrass.io/)|
 |EXTRA_CHROME_OPTS|Extra chrome options. can be used to set proxy(--proxy-server=).  |               |
 |HOST_PORT     |Host port for VNC        |8080           |
-|GRASS_FLAVOR  |Grass flavor to use. `lite` for lite node, `community` for community node. You don't have to change this; use the different docker images. |lite           |
 
 ## directories
 /data: data. mount this folder to keep your grass cookies.
