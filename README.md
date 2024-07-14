@@ -26,9 +26,9 @@ Add other environment variables if needed.
 
 
 ## Pre built image
-amd64: `cwithw/grass-chrome-novnc:latest`
+`cwithw/grass-chrome-novnc:lite` for lite node, `cwithw/grass-chrome-novnc:community` for community node.
 
-arm64: `cwithw/grass-chrome-novnc:latest`
+`cwithw/grass-chrome-novnc:latest` is an alias for `cwithw/grass-chrome-novnc:lite`.
 
 ## Building
 if you are having trouble building it because you cannot access google server to download Grass plugin, you can use `docker build . -t cwithw/grass-chrome-novnc:latest --build-arg https_proxy=http://192.168.32.2:7890` to build it with proxy.
@@ -44,6 +44,7 @@ if you are having trouble building it because you cannot access google server to
 |HOMEPAGE      |Homepage to open         |[grass homepage](https://app.getgrass.io/)|
 |EXTRA_CHROME_OPTS|Extra chrome options. can be used to set proxy(--proxy-server=).  |               |
 |HOST_PORT     |Host port for VNC        |8080           |
+|GRASS_FLAVOR  |Grass flavor to use. `lite` for lite node, `community` for community node. You don't have to change this; use the different docker images. |lite           |
 
 ## directories
 /data: data. mount this folder to keep your grass cookies.

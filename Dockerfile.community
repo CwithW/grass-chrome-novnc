@@ -25,7 +25,8 @@ ENV	VNC_PASS="CHANGE_IT" \
 # Extra
 HOMEPAGE="https://app.getgrass.io/" \
 EXTRA_CHROME_OPTS="" \
-EXTRA_COMMAND="exit 0"
+EXTRA_COMMAND="exit 0" \
+GRASS_FLAVOR="community"
 
 COPY assets/ /
 

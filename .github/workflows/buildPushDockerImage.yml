@@ -26,10 +26,19 @@ jobs:
             username: ${{ secrets.DOCKER_USR }}
             password: ${{ secrets.DOCKER_TOKEN }}
       
-      - name: Build and push
+      - name: Build and push lite
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: ./Dockerfile.lite
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: cwithw/grass-chrome-novnc:latest
+          tags: cwithw/grass-chrome-novnc:lite,cwithw/grass-chrome-novnc:latest
+      - name: Build and push community
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.community
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: cwithw/grass-chrome-novnc:community
