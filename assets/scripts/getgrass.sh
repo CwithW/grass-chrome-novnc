@@ -10,7 +10,7 @@ fi
 
 if [ "$GRASS_FLAVOR" = "community" ]; then
   echo "Downloading Grass extension (community)..."
-  CRX_URL="https://files.getgrass.io/file/grass-extension-upgrades/extension-latest/grass-community-node-linux-4.20.2.zip"
+  CRX_URL="https://files.getgrass.io/file/grass-extension-upgrades/extension-latest/grass-community-node-linux-4.25.0.zip"
   USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"
   # download the zip file, need to extract the CRX file from it.
   wget -O /tmp/grass.zip --user-agent="$USER_AGENT" "$CRX_URL"
